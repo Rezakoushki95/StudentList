@@ -13,6 +13,7 @@
 		F5A0EFD428DAE2ED00EA94A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A0EFD228DAE2ED00EA94A4 /* Main.storyboard */; };
 		F5A0EFD628DAE2F100EA94A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A0EFD528DAE2F100EA94A4 /* Assets.xcassets */; };
 		F5A0EFD928DAE2F100EA94A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A0EFD728DAE2F100EA94A4 /* LaunchScreen.storyboard */; };
+		F5A0EFE328DB54EE00EA94A4 /* StudentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0EFE228DB54EE00EA94A4 /* StudentDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F5A0EFD528DAE2F100EA94A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5A0EFD828DAE2F100EA94A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5A0EFDA28DAE2F100EA94A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5A0EFE228DB54EE00EA94A4 /* StudentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				F5A0EFCE28DAE2ED00EA94A4 /* SceneDelegate.swift */,
 				F5A0EFD028DAE2ED00EA94A4 /* ViewController.swift */,
 				F5A0EFD228DAE2ED00EA94A4 /* Main.storyboard */,
+				F5A0EFE228DB54EE00EA94A4 /* StudentDetailViewController.swift */,
 				F5A0EFD528DAE2F100EA94A4 /* Assets.xcassets */,
 				F5A0EFD728DAE2F100EA94A4 /* LaunchScreen.storyboard */,
 				F5A0EFDA28DAE2F100EA94A4 /* Info.plist */,
@@ -141,6 +144,7 @@
 				F5A0EFD128DAE2ED00EA94A4 /* ViewController.swift in Sources */,
 				F5A0EFCD28DAE2ED00EA94A4 /* AppDelegate.swift in Sources */,
 				F5A0EFCF28DAE2ED00EA94A4 /* SceneDelegate.swift in Sources */,
+				F5A0EFE328DB54EE00EA94A4 /* StudentDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
