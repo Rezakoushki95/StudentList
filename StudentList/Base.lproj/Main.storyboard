@@ -81,11 +81,11 @@
             <objects>
                 <viewController id="IKK-5E-Ls5" customClass="StudentDetailViewController" customModule="StudentList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D3z-de-dUc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNx-39-OIl">
-                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgc-ce-xjO">
                                         <rect key="frame" x="8" y="8" width="119" height="21"/>
@@ -119,10 +119,18 @@
                                 <action selector="cancelBarButtonPressed:" destination="IKK-5E-Ls5" id="bVq-H6-qgD"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Wep-M6-pc9"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Wep-M6-pc9">
+                            <connections>
+                                <segue destination="KJR-Yn-Bw0" kind="unwind" unwindAction="unwindFromStudentDetailWithSegue:" id="jVO-Ji-g1j"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="studentNameField" destination="31P-TE-4su" id="f6g-Ze-4G2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFw-0A-9zx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="KJR-Yn-Bw0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2604" y="109"/>
         </scene>
@@ -146,7 +154,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cwB-hV-4a3"/>
+        <segue reference="xK2-XR-hGw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

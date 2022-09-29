@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 	
 	@IBOutlet weak var tableView: UITableView!
 	
-	let studentNames = [
+	var studentNames = [
 		"Michael",
 		"Christopher",
 		"Jessica",
@@ -37,6 +37,32 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		tableView.delegate = self
 		tableView.dataSource = self
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "ShowStudentDetail" {
+			let destination = segue.destination as! StudentDetailViewController
+			let selectedIndexPath = tableView.indexPathForSelectedRow!
+			destination.studentName = studentNames[selectedIndexPath.row]
+		} else {
+			if let selectedIndexPath = tableView.indexPathForSelectedRow {
+				tableView.deselectRow(at: selectedIndexPath, animated: false)
+			}
+		}
+	}
+	
+	@IBAction func unwindFromStudentDetail(segue: UIStoryboardSegue) {
+		let source = segue.source as! StudentDetailViewController
+		if let selectedIndexPath = tableView.indexPathForSelectedRow {
+			studentNames[selectedIndexPath.row] = source.studentName
+			tableView.reloadRows(at: [selectedIndexPath], with: .automatic)
+		} else {
+			let newIndexPath = IndexPath(row: studentNames.count, section: 0)
+			studentNames.append(source.studentName)
+			tableView.insertRows(at: [newIndexPath], with: .bottom)
+			tableView.scrollToRow(at: newIndexPath, at: .bottom, animated: true)
+			
+		}
 	}
 
 }
